@@ -1,0 +1,43 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.gallery-item {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  flex-basis: calc((100% - 2 * 24px) / 3);
+  /* або інше значення, згідно макету */
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-link {
+  display: block;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px; /* Приклад фіксованої висоти */
+  object-fit: cover;
+  display: block;
+}
+
+/* Стилі для basicLightbox, якщо потрібно переписати дефолтні */
+.basicLightbox {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.basicLightbox img {
+  display: block;
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: auto;
+}
